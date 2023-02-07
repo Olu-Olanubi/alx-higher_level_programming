@@ -14,7 +14,4 @@ def write_file(filename="", text=""):
         f.write(text)
 
     with open(filename, mode="r", encoding="utf-8") as f:
-        nb_lines = 0
-        for line in f:
-            nb_lines += 1
-    return nb_lines
+        return len(f.read())
