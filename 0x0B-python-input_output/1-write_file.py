@@ -10,11 +10,11 @@ def write_file(filename="", text=""):
     Returns:
         number of lines in file
     """
-    nb_lines = 0
-    with open(filename, mode='w', encoding='utf-8') as f:
+    with open(filename, mode="w", encoding="utf-8") as f:
         f.write(text)
 
-    with open(filename, mode='r', encoding= 'utf-8') as f:
+    with open(filename, mode="r", encoding="utf-8") as f:
+        nb_lines = 0
         for line in f:
             nb_lines += 1
     return nb_lines
