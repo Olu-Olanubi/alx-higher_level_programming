@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-def write_file(filename="", text= ""):
+def write_file(filename="", text=""):
     """writes a string to a text file (UTF8)
        and returns the number of characters written
     Args:
@@ -11,8 +11,10 @@ def write_file(filename="", text= ""):
         number of lines in file
     """
     nb_lines = 0
-    with open(filename, 'r+', encoding='utf-8') as f:
+    with open(filename, mode='w', encoding='utf-8') as f:
         f.write(text)
+
+    with open(filename, mode='r', encoding= 'utf-8) as f:
         for line in f:
             nb_lines += 1
     return nb_lines
