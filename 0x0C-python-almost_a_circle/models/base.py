@@ -3,7 +3,7 @@
 import json
 import csv
 
-Class Base:
+class Base:
     __nb_objects = 0
     def __init__(self, id=None):
         """Initialize id, increment class attribute if no id and set as id"""
